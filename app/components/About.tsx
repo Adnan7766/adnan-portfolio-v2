@@ -266,20 +266,28 @@ const About: React.FC = () => {
                     whileHover={{ transition: { duration: 1.5 } }}
                   />
                   
+                  {/* Your Photo/GIF - Fixed Size */}
                   <motion.div
-  whileHover={{ scale: 1.05, rotate: 0.5 }}
-  transition={{ type: "spring", stiffness: 300 }}
-  className="w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center overflow-hidden"
->
-  {/* Your GIF */}
-  <Image 
-    src="./codee.gif" 
-    alt="Coding Animation"
-    width={320}
-    height={320}
-    className="w-full h-full object-cover"
-  />
-</motion.div>
+                    whileHover={{ scale: 1.05, rotate: 0.5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center overflow-hidden relative"
+                  >
+                    {/* Option 1: Your GIF */}
+                    <Image 
+                      src="/codee.gif" 
+                      alt="Adnan Rajab - Full Stack Developer"
+                      width={320}
+                      height={320}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                    
+                    {/* Option 2: If no GIF, show fallback */}
+                    {/* <div className="text-center absolute">
+                      <Sparkles size={48} className="text-cyan-400 mx-auto mb-4" />
+                      <p className="text-gray-400">Your Photo/Animation</p>
+                    </div> */}
+                  </motion.div>
                   
                   {/* Enhanced Floating Elements */}
                   <FloatingElement delay={0}>
