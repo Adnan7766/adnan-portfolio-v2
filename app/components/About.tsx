@@ -267,15 +267,19 @@ const About: React.FC = () => {
                   />
                   
                   <motion.div
-                    whileHover={{ scale: 1.05, rotate: 0.5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center"
-                  >
-                    <div className="text-center">
-                      <Sparkles size={48} className="text-cyan-400 mx-auto mb-4" />
-                      <p className="text-gray-400">Your Photo/Animation</p>
-                    </div>
-                  </motion.div>
+  whileHover={{ scale: 1.05, rotate: 0.5 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center overflow-hidden"
+>
+  {/* Your GIF */}
+  <Image 
+    src="/codee.gif" 
+    alt="Coding Animation"
+    width={320}
+    height={320}
+    className="w-full h-full object-cover"
+  />
+</motion.div>
                   
                   {/* Enhanced Floating Elements */}
                   <FloatingElement delay={0}>
