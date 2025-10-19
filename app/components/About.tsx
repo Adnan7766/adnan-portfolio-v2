@@ -273,7 +273,7 @@ const About: React.FC = () => {
 >
   {/* Your GIF */}
   <Image 
-    src="/codee.gif" 
+    src="./codee.gif" 
     alt="Coding Animation"
     width={320}
     height={320}
